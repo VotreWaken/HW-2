@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using ConsoleApp31.Models;
+using WindowsFormsApp26.View;
+
 namespace WindowsFormsApp26
 {
     public partial class Form1 : Form
@@ -158,6 +160,24 @@ namespace WindowsFormsApp26
                     ResultLB.Items.Add(vegetable.ToString());
                 }
             }
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            AddForm FormAdd = new AddForm(Db_);
+            FormAdd.Show();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            UpdateForm FormAdd = new UpdateForm(Db_);
+            FormAdd.Show();
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            DeleteForm FormAdd = new DeleteForm(Db_);
+            FormAdd.Show();
         }
     }
 }

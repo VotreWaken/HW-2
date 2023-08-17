@@ -37,6 +37,9 @@
             this.MaxCaloriesTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FindBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ResultLB
@@ -120,11 +123,44 @@
             this.FindBtn.UseVisualStyleBackColor = true;
             this.FindBtn.Click += new System.EventHandler(this.FindBtn_Click);
             // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(56, 323);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddBtn.TabIndex = 9;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.Location = new System.Drawing.Point(56, 362);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(75, 23);
+            this.UpdateBtn.TabIndex = 10;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.Location = new System.Drawing.Point(56, 404);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteBtn.TabIndex = 11;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 450);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.FindBtn);
             this.Controls.Add(this.MaxCaloriesTB);
             this.Controls.Add(this.label1);
@@ -152,6 +188,9 @@
         private System.Windows.Forms.TextBox MaxCaloriesTB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button FindBtn;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button DeleteBtn;
     }
 }
 

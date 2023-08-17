@@ -249,5 +249,27 @@ namespace ConsoleApp31.Models
 
             return res;
         }
+
+        // Added
+        public async void Add(VegetableFruitsModel product)
+        {
+            string strCmd = $"insert into VegetablesAndFruits(Name, Type, Color, Calories) values('{product.Name}', '{product.Type}', '{product.color}', {product.calories})";
+            SqlCommand cmd = new SqlCommand(strCmd, connection);
+            await cmd.ExecuteNonQueryAsync();
+        }
+
+        public async void Delete(int id)
+        {
+            string strCmd = $"delete from VegetablesAndFruits where Id={id}";
+            SqlCommand cmd = new SqlCommand(strCmd, connection);
+            await cmd.ExecuteNonQueryAsync();
+        }
+
+        public async void Update(VegetableFruitsModel product)
+        {
+            string strCmd = $"update VegetablesAndFruits SET Name = '{product.Name}', Type = '{product.Type}', Calories = '{product.calories}', Color = '{product.color}' from VegetablesAndFruits where ID = {product.Id};";
+            SqlCommand cmd = new SqlCommand(strCmd, connection);
+            await cmd.ExecuteNonQueryAsync();
+        }
     }
 }
